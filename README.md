@@ -1,99 +1,53 @@
-# 05 Third-Party APIs: Work Day Scheduler
+<!-- // READ ME IN PROGRESS - REFERENCE COPIED FROM PREVIOUS PROBLEM -->
 
-## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+# code-quiz
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Description
 
-## User Story
+    The objective of this project is to create an interactive web page that offers a coding quiz, providing users with an engaging and challenging experience. The quiz will include a timed multiple-choice questionnaire, enriched with interactive coding challenges. By storing high scores, the aim is to enable users to measure their progress against their peers. When the user clicks the start button, a timer begins, and they are presented with a question. Upon answering a question, another question appears. If a question is answered incorrectly, time is deducted from the clock. The game ends when all questions are answered or the timer runs out. At the end of the game, users can save their initials and score. The web page is designed to run smoothly in a browser, featuring dynamically updated HTML and CSS elements driven by custom JavaScript code. The user interface is clean, polished, and responsive, ensuring an enjoyable experience. The primary goals of this project are to improve proficiency in JavaScript and web APIs while gaining familiarity with commonly used assessment formats in interviews.
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Installation
 
-## Acceptance Criteria
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+1. Created HTML file and CSS templates, to be adjusted as the code is written.
+2. Created the Javascript file.
+3. Create global variables: set initial score, sets initial timer count, sets array of strings with all quiz questions, sets arrays of strings with all possible answer for each question, sets array with the index number of all the correct answers, sets the index number of current question, starting at zero
+4. Create functions: startTimer, nextQuestion, checkAnswer, showQuestion, disableOptions, showNextButton, show Result,
+5. Created event listener for the start button
 
-The following animation demonstrates the application functionality:
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+## Usage
 
-## Grading Requirements
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+1. Open the following URL in the browser: https://virginiafreitas.github.io/code-quiz/
+2. Click on the "Start Quiz" button.
+3. The timer will start to run and user will have 120 seconds to answer all the questions.
+4. User selects the alternatives that are believed to be corrected, for all the 6 questions.
+5. User press the "Next Question" button.
+6. An alert will pop up informing the user if that answer is correct or wront.
+7. After 6 questions answered, the user types the initials.
+8. The score will be displayed.
 
-This Challenge is graded based on the following criteria:
+![alt text](assets/images/screenshot1.png) 
 
-### Technical Acceptance Criteria: 40%
+![alt text](assets/images/screenshot2.png) 
 
-* Satisfies all of the above acceptance criteria plus the following:
+![alt text](assets/images/screenshot3.png) 
 
-  * Uses a date utility library to work with date and time
+![alt text](assets/images/screenshot4.png) 
 
-### Deployment: 32%
+![alt text](assets/images/screenshot5.png) 
 
-* Application deployed at live URL
 
-* Application loads with no errors
 
-* Application GitHub URL submitted
+## Credits
 
-* GitHub repo contains application code
+I have received advice from the UC Berkeley Extension tutors Henry Weigand on pseudocoding and Dennis Itua and Kyle Vance on developing the code.
+I reached out to the Mozilla Developer webpage to learn how to use some of the functions. ( https://developer.mozilla.org/en-US/ )
+I reached out to the Day.js webpage to learn how to use the tool. ( https://day.js.org/en/ )
 
-### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+## License
 
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+    MIT License
