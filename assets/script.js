@@ -20,7 +20,5 @@ $(function () {
       $("#hour-" + i).addClass("future");    
     }  
   }  
-  
+
 });
-
-
