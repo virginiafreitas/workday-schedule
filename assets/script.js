@@ -10,14 +10,14 @@ $(function () {
   for (var i=9; i<18; i++) {
     //apply the past, present, or future class to each time block by comparing the time block to the current hour in an if statement.
     if (currentTime < i) {
-      $("#hour-" + i).addClass("past"); //$("hour-" + i) is equivalent to document.querySelector("#hour-" + i)
+      $("#hour-" + i).addClass("future"); //$("hour-" + i) is equivalent to document.querySelector("#hour-" + i)
     } else if (currentTime === i) {
-      $("#hour-" + i).removeClass("past"); //removes the existing class "pass" from the element of that id attribute in the html    
+      $("#hour-" + i).removeClass("future"); //removes the existing class "future" from the element of that id attribute in the html    
       $("#hour-" + i).addClass("present"); //adds the class "present" from the element of that id attribute in the html
     } else {
-      $("#hour-" + i).removeClass("past");      
+      $("#hour-" + i).removeClass("future");      
       $("#hour-" + i).removeClass("present");      
-      $("#hour-" + i).addClass("future");    
+      $("#hour-" + i).addClass("past");    
     }  
   }  
 
