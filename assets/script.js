@@ -23,5 +23,13 @@ $(function () {
 
   // SECOND STEP: use dayjs to display the current date in the header of the page
   $("#currentDay").text(dayjs().format('MM/DD/YYYY'))  
-
+  
+  // THIRD STEP: save user input in the local storage
+  $(".saveBtn").on("click", function() {  // Added a listener for click events on the save button. 
+    //"this" refers to the class "saveBtn"
+    console.log($(this).siblings(".description").val())  
+    // use setItem() to add key (ex: hour-10) and value input (description) to the localStorage
+    localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".description").val()) // Used the id in the containing time-block as a key to save the user input in local storage.
+  })
+  
 });
