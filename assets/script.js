@@ -31,5 +31,17 @@ $(function () {
     // use setItem() to add key (ex: hour-10) and value input (description) to the localStorage
     localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".description").val()) // Used the id in the containing time-block as a key to save the user input in local storage.
   })
+
+  // FOURTH STEP: retrieve values saved on the localStorage and display on the textarea elements
+  $(".time-block").each(function() { //runs function in the specified time-block class
+    //figure out what hour block id you're in by using $(this) and the id attribute of each time-block
+    var timeBlockId = $(this).attr("id");
+    //getItem for localStorage to pull previously stored content
+    var userInput = localStorage.getItem(timeBlockId);
+    //check localStorage if there is storage and display the items (value) inside the text area of corresponding hour
+    if(userInput) {
+      $(this).find(".description").val(userInput);
+    }  
+  })  
   
 });
